@@ -1,4 +1,4 @@
-# 🌾 ML-Based Crop Recommender System
+# 🌾 ML-Driven Crop Recommender System
 
 *Intelligent agricultural decision-making through machine learning*
 
