@@ -40,7 +40,7 @@ The dataset contains the following features used for crop classification:
 * `rainfall` - rainfall in mm
 * `label` - crop name
 
-This is a **classification problem** where we use all the soil and environmental features (N, P, K, temperature, humidity, pH, rainfall) to predict the appropriate crop name using various machine learning models.
+This is a **classification problem** where I used all the soil and environmental features (N, P, K, temperature, humidity, pH, rainfall) to predict the appropriate crop name using various machine learning models.
 
 ## 🚀 Getting Started
 
@@ -88,7 +88,7 @@ Download both notebooks to compare and analyze the effect of different train-tes
 
 ## 📊 Model Performance
 
-Our comprehensive model comparison achieved excellent performance across all algorithms:
+My comprehensive model comparison achieved excellent performance across all algorithms:
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|--------|----------|
