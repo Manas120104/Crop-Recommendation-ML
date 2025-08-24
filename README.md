@@ -26,26 +26,21 @@ This project presents an intelligent crop recommendation system that leverages s
 - **Model Optimization**: GridSearchCV, cross-validation
 - **Dataset**: Kaggle Agricultural Dataset (soil & environmental features)
 
-## 🗂️ Project Structure
+## 📊 Dataset Details
 
-```
-ML-Based-Crop-Recommender-System/
-├── data/
-│   ├── raw/                    # Original agricultural dataset
-│   └── processed/              # Cleaned and preprocessed data
-├── notebooks/
-│   ├── EDA.ipynb              # Exploratory Data Analysis
-│   ├── preprocessing.ipynb     # Data cleaning and feature engineering
-│   └── model_comparison.ipynb  # Model benchmarking and evaluation
-├── src/
-│   ├── models/                # ML model implementations
-│   ├── utils/                 # Helper functions and utilities
-│   └── preprocessing.py       # Data preprocessing pipeline
-├── results/
-│   ├── model_performance/     # Performance metrics and comparisons
-│   └── visualizations/        # Generated plots and charts
-└── requirements.txt
-```
+The dataset contains the following features used for crop classification:
+
+**Data fields**
+* `N` - ratio of Nitrogen content in soil
+* `P` - ratio of Phosphorous content in soil
+* `K` - ratio of Potassium content in soil
+* `temperature` - temperature in degree Celsius
+* `humidity` - relative humidity in %
+* `ph` - ph value of the soil
+* `rainfall` - rainfall in mm
+* `label` - crop name
+
+This is a **classification problem** where we use all the soil and environmental features (N, P, K, temperature, humidity, pH, rainfall) to predict the appropriate crop name using various machine learning models.
 
 ## 🚀 Getting Started
 
@@ -53,7 +48,7 @@ ML-Based-Crop-Recommender-System/
 
 ```bash
 Python 3.8+
-pip or conda package manager
+Anaconda Distribution
 ```
 
 ### Installation
@@ -64,40 +59,50 @@ pip or conda package manager
    cd ML-Based-Crop-Recommender-System
    ```
 
-2. **Install dependencies**
+2. **Install Anaconda**
+   - Download Anaconda from [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distribution)
+   - Follow the installation instructions for your operating system
+   - Create a new conda environment:
    ```bash
-   pip install -r requirements.txt
+   conda create -n crop-recommender python=3.8
+   conda activate crop-recommender
+   ```
+   - Install required packages:
+   ```bash
+   conda install pandas numpy scikit-learn matplotlib seaborn jupyter
+   pip install xgboost
    ```
 
 3. **Download the dataset**
-   - Download the agricultural dataset from Kaggle
-   - Place it in the `data/raw/` directory
+   - Download `Crop_recommendation.csv` from Kaggle
+   - Place it in the project directory
 
 ### Quick Start
 
-```python
-# Load and preprocess data
-from src.preprocessing import load_and_preprocess_data
-X_train, X_test, y_train, y_test = load_and_preprocess_data()
+You can explore the project through two main notebooks:
 
-# Train ensemble model
-from src.models.ensemble import CropEnsembleModel
-model = CropEnsembleModel()
-model.fit(X_train, y_train)
+- **`Crop Prediction (80-20).ipynb`**: Implementation with 80-20 train-test split
+- **`Crop prediction project.ipynb`**: Implementation with 70-30 train-test split
 
-# Get crop recommendations
-recommendations = model.predict(X_test)
-```
+Download both notebooks to compare and analyze the effect of different train-test split ratios on model performance.
 
 ## 📊 Model Performance
 
-Our ensemble approach achieved superior performance across key metrics:
+Our comprehensive model comparison achieved excellent performance across all algorithms:
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|--------|----------|
-| XGBoost | 94.2% | 93.8% | 94.1% | 93.9% |
-| Neural Network | 92.7% | 92.3% | 92.6% | 92.4% |
-| **Ensemble** | **99.5%** | **98.4%** | **98.7%** | **98.5%** |
+| Decision Tree | 98.86% | 98.82% | 98.96% | 98.88% |
+| Random Forest | 99.55% | 99.57% | 99.62% | 99.58% |
+| Logistic Regression | 96.59% | 96.53% | 96.70% | 96.57% |
+| Support Vector Machine | 98.18% | 98.04% | 98.43% | 98.15% |
+| K-Nearest Neighbour | 97.05% | 97.01% | 97.33% | 97.00% |
+| Categorical Naive Bayes | 98.64% | 98.60% | 98.41% | 98.43% |
+| Gaussian Naive Bayes | 98.86% | 98.84% | 98.73% | 98.77% |
+| XGBoost | 99.32% | 99.32% | 99.42% | 99.34% |
+| Bagging Classifier | 99.09% | 99.11% | 98.95% | 99.02% |
+| Voting Classifier | 99.55% | 99.57% | 99.62% | 99.58% |
+| **Stacking Classifier** | **99.77%** | **99.77%** | **99.81%** | **99.79%** |
 
 ## 🔍 Key Insights
 
@@ -124,21 +129,16 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - Kaggle for providing the comprehensive agricultural dataset
 - The open-source community for excellent ML libraries
-- Agricultural domain experts for validation insights
 
 ## 📧 Contact
 
-**Your Name** - your.email@example.com
+**Your Name** - manaskd2019@gmail.com
 
-Project Link: [https://github.com/yourusername/ML-Based-Crop-Recommender-System](https://github.com/yourusername/ML-Based-Crop-Recommender-System)
+Project Link: [https://github.com/Manas120104/ML-Based-Crop-Recommender-System](https://github.com/Manas120104/ML-Based-Crop-Recommender-System)
 
 ---
 
