@@ -136,9 +136,9 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## 📧 Contact
 
-**Your Name** - manaskd2019@gmail.com
+**Manas Kamal Das** - manaskd2019@gmail.com
 
-Project Link: [https://github.com/Manas120104/ML-Based-Crop-Recommender-System](https://github.com/Manas120104/ML-Based-Crop-Recommender-System)
+Project Link: [https://github.com/Manas120104/Crop-Recommendation-ML](https://github.com/Manas120104/Crop-Recommendation-ML)
 
 ---
 
